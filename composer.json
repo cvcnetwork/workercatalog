@@ -1,0 +1,23 @@
+{
+    "name": "cvcnetwork/workercatalog",
+    "description": "",
+    "authors": [
+        {
+            "name": "CVC Dev",
+            "email": "dev@cvc.tv"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "CVCNetwork\\WorkerCatalog": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
