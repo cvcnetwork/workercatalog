@@ -1,4 +1,4 @@
-<?php namespace Cvcnetwork\WorkerCatalog;
+<?php namespace CVCNetwork\WorkerCatalog;
 
 use Illuminate\Support\ServiceProvider;
 use CVCNetwork\Messaging\Event;
@@ -22,8 +22,10 @@ class WorkerCatalogServiceProvider extends ServiceProvider {
 
     //Register listeners via artisan
     \Event::listen('artisan.start', function () {
-      //Use the same queue name as in amqp.php config
-      Event::listen("node_notifications", "item.publish", "CVCNetwork\WorkerCatalog");
+
+      //Find the configurations to use for this worker
+      //The queue name in the CVCNetworkMessaging amqp file must match this
+      Event::listen('WorkerCatalog', 'item.publish', 'CVCNetwork\WorkerCatalog');
     });
   }
 
