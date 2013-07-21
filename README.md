@@ -9,10 +9,22 @@ Provides a Worker to process incoming messages for yesHEis system. Performs the 
 Installation
 ============
 * Setup artisan workers to bind a number of RabbitMQ queues to specific topics
-* 
-
 
 Usage
 ==========
 
 Laravel yesHEis Catalog Messaging Workers
+
+Topics
+==========
+* item.publish
+* item.update
+* term.create
+* term.update
+* term.delete
+* category.create
+* category.update
+* category.delete
+* user.update
+* session.delete
+* session.touch
